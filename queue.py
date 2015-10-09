@@ -26,20 +26,20 @@ print '<HTML><head><title>Sandwich Queue!</title><meta http-equiv="refresh" cont
 
 print '<meta http-equiv="refresh" content="5" >'
 
-queue = open('/usr/lib/WebData/queue.txt', "r")
-completed = open('/usr/lib/WebData/completed.txt', "r")
-inprogress = open('/usr/lib/WebData/inprogress.txt', "r")
+queue = open('E:\\WebData\\queue.txt', "r")
+completed = open('E:\\WebData\\completed.txt', "r")
+inprogress = open('E:\\WebData\\inprogress.txt', "r")
 
 #file = open("JacobList.txt", "r")
 
-print '<table style="width:100%">'
-print '<tr>\n <th rowspan="4"> In Progress </th></tr>'
+print '<table style="width:100%" border="1">'
+print '<tr>\n <th colspan="4"> In Progress </th></tr>'
 print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
 printQueue(inprogress)
-print '<tr>\n <th rowspan="4"> Queue </th></tr>'
+print '<tr>\n <th colspan="4"> Queue </th></tr>'
 print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
 printQueue(queue)
-print '<tr>\n <th rowspan="4"> Completed </th></tr>'
+print '<tr>\n <th colspan="4"> Completed </th></tr>'
 print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
 printQueue(completed)
 print '</table></body>'
