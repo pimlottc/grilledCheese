@@ -65,10 +65,10 @@ print '<table style="width:100%" border="1">'
 print '<tr>\n <th colspan="4"> In Progress </th></tr>'
 print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
 print inprogressTable
-print '<tr>\n <th rowspan="4"> Queue </th></tr>'
+print '<tr>\n <th colspan="4"> Queue </th></tr>'
 print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
 print makeTableLines(queue)
-print '<tr>\n <th rowspan="4"> Completed </th></tr>'
+print '<tr>\n <th colspan="4"> Completed </th></tr>'
 print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
 print completedTable
 print '</table></body>'
