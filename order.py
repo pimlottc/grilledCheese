@@ -51,7 +51,7 @@ for topping in toppings:
 orderLine = orderLine[:-1]
 orderLine += '|' + str(int(time.time()))
 
-queue.write(orderLine)
+queue.write('\n'+orderLine)
 queue.close()
 
 #file = open("JacobList.txt", "r")
