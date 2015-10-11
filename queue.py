@@ -15,6 +15,9 @@ cheeses.sort()
 toppings = ["avocado", "dill pickles", "creamy horseradish", "yellow mustard", "mayo", "horseradish mustard", "bell peppers", "sunflower seeds", "tomatoes", "ham", "bologna", "chicken", "roast beef", "turkey"]
 toppings.sort()
 
+names = ["Pia", "Hazel", "Genevieve", "Annabella", "Chris", "Mike", "Jenny", "John", "Marie", "Lynn", "Jacob", "Vickie", "Jason", "Amber", "Han", "Corrie", "Brad"]
+names.sort()
+
 def makeTableLines(dataList):
     output = ''
     for line in dataList:
@@ -90,8 +93,7 @@ print '</table>'
 
 print '<h3>Request a sandwich!</h3>'
 print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py">'
-print '<table>\n <tr>\n  <th>Name</th>\n  <th>Bread</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppings</th>\n </tr>'
-print ' <tr>\n  <td>\n   <input type="text" name="name">\n  </td>'
+print '<table border="1">\n <tr>\n  <th>Bread</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppings</th>\n </tr>'
 print '  <td>'
 columnCheckTable("bread", breads)
 print '  </td>'
@@ -101,7 +103,11 @@ print '  </td>'
 print '  <td>'
 columnCheckTable("toppings", toppings, 3)
 print '   Custom: <input type="text" name=toppings[]>'
-print '  </td>'
+print '  </td></tr>'
+print '  <tr>'
+print '   <td colspan="3"> Name: <input type="text" name="name"></td></tr>'
+print ' </table>'
+print ' '
 print '</body>'
 
 
