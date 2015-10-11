@@ -30,8 +30,8 @@ sanatizer = re.compile('[^a-zA-Z0-9_ ,\\|]')
 fs = cgi.FieldStorage()
 name = fs["name"].value
 bread = fs["bread"].value
-cheese = fs["cheese"].value
-toppings = fs["toppings"].value
+cheese = fs.getList("cheese")
+toppings = fs.getList("toppings")
 
 print name
 print bread
@@ -40,38 +40,6 @@ print toppings
 print time.time()
 
 #file = open("JacobList.txt", "r")
-
-print '<table style="width:100%" border="1">'
-print '<tr>\n <th colspan="4"> In Progress </th></tr>'
-print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
-print inprogressTable
-print '<tr>\n <th colspan="4"> Queue </th></tr>'
-print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
-print makeTableLines(queue)
-print '<tr>\n <th colspan="4"> Completed </th></tr>'
-print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
-print completedTable
-print '</table>'
-
-print '<h3>Request a sandwich!</h3>'
-print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py">'
-print '<table border="1">\n <tr>\n  <th>Bread</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppings</th>\n </tr>'
-print '  <td>'
-columnCheckTable("bread", breads)
-print '  </td>'
-print '  <td>'
-columnCheckTable("cheese", cheeses)
-print '  </td>'
-print '  <td>'
-columnCheckTable("toppings", toppings, 3)
-print '   Custom: <input type="text" name=toppings[]>'
-print '  </td></tr>'
-print '  <tr>'
-print '   <td colspan="3"> Name: <input type="text" name="name"></td></tr>'
-print ' </table>'
-print ' '
-print '</body>'
-
 
 # cpy-paste form example
 #        print ("<FORM method=\"post\" action=\"/cgi-bin/jPurchased.py\">{}<INPUT type=\"hidden\" name=\"line\" value=\"{}\">"
