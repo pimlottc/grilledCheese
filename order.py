@@ -34,8 +34,9 @@ cheese = fs.getlist('cheese')
 toppings = fs.getlist('toppings')
 
 
-if (len(cheese) > 2 || len(cheese) < 1):
+if (len(cheese) > 2 or len(cheese) < 1):
     print '<h3>Illegal number of cheeses</h3>'
+    exit(1)
     
 orderLine = name+'|'+bread+'|'
 
