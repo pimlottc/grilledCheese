@@ -105,7 +105,12 @@ columnCheckTable("toppings", toppings, 3)
 print '   Custom: <input type="text" name=toppings[]>'
 print '  </td></tr>'
 print '  <tr>'
-print '   <td colspan="3"> Name: <input type="text" name="name"></td></tr>'
+print '   <td colspan="3"> Name: '
+print '    <select name="name">'
+for name in names:
+    print '<option value="{}" >{}</option>'.format(name, name)
+print '    </select>'
+print '    <input type="submit" value="SUBMIT!!" style="float: right;"></td></tr>'
 print ' </table>'
 print ' '
 print '</body>'
