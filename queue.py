@@ -108,7 +108,7 @@ print '<h3>Request a sandwich!</h3>'
 print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py">'
 print '<table border="1">\n <tr>\n  <th>Bread</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppings</th>\n </tr>'
 print '  <td>'
-columnCheckTable("bread", breads)
+columnRadioTable("bread", breads)
 print '  </td>'
 print '  <td>'
 columnCheckTable("cheese", cheeses)
