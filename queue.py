@@ -30,7 +30,7 @@ print "Content-Type: text/html"
 print "Cache-control: no-cache"
 print
 
-print '<HTML><head><title>Sandwich Queue!</title><meta http-equiv="refresh" content="5" ></head>\n<body>\n<H3>Sandwich Queue!</H3>\n'
+print '<HTML><head><title>Sandwich Queue!</title><!--meta http-equiv="refresh" content="5" --></head>\n<body>\n<H3>Sandwich Queue!</H3>\n'
 
 #layout of queue "database" <name> | <bread> | <cheese, comma sep> | <toppings, comma sep> | unixTime of order\n
 #There will be 3 queue "database" files, completed, in progress, and queue
