@@ -54,7 +54,17 @@ makeTableLines(queue)
 
 queue.sort(queueSort)
 
-
+def twoColumnCheckTable(name, options):
+    i = 0
+    print '   <table>\n    <tr><td>'
+    for option in options:
+        print '   <INPUT type="checkbox" name="{}[]" value="{}"> {} '.format(name, option, option)
+        i += 1
+        if i == len(options)/2:
+            print '     </td><td>'
+        elif i != len(options):
+            print '     <br>'
+    print '     </td></tr></table>'
 
 #file = open("JacobList.txt", "r")
 
@@ -69,27 +79,15 @@ print '<tr>\n <th colspan="4"> Completed </th></tr>'
 print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
 print completedTable
 print '</table>'
-print '<p>'
 
-cheeses = ["cheddar", "white cheddar", "pepper jack", "candy"]
+cheeses = ["cheddar", "white cheddar", "pepper jack", "candy", "juice"]
 print '<h3>Request a sandwich!</h3>'
 print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py">'
 print '<table>\n <tr>\n  <th>Name</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppings</th>\n </tr>'
 print ' <tr>\n  <td>\n   <input type="text" name="name">\n  </td>'
 print '  <td>'
-i = 0
-print '   <table>\n    <tr><td>'
-for cheese in cheeses:
-    print '   <INPUT type="checkbox" name="cheese[]" value="{}"> {} '.format(cheese, cheese)
-    i += 1
-    if i == len(cheeses):
-        print ''
-    elif i == len(cheeses)/2:
-        print '     </td><td>'
-    else:
-        print '     <br>'
-
-print '</p>'
+twoColumnCheckTable("cheese", cheeses)
+print '  </td>'
 print '</body>'
 
 
