@@ -40,11 +40,14 @@ if (len(cheese) > 2 or len(cheese) < 1):
     
 orderLine = name+'|'+bread+'|'
 
+
 for chee in cheese:
-    orderLine += chee
+    orderLine += chee + ','
+orderLine = orderLine[:-1]
 orderLine += '|'
 for topping in toppings:
-    orderLine += topping
+    orderLine += topping + ','
+orderLine = orderLine[:-1]
 orderLine += '|' + str(int(time.time()))
 
 print orderLine
