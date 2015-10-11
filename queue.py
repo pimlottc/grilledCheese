@@ -55,9 +55,6 @@ makeTableLines(queue)
 queue.sort(queueSort)
 
 
-#TODO: for each in queue, store the updated nameCount at end of list
-#TODO: then sort the list by stored nameCount and unix time to break ties
-
 
 #file = open("JacobList.txt", "r")
 
@@ -71,7 +68,18 @@ print makeTableLines(queue)
 print '<tr>\n <th colspan="4"> Completed </th></tr>'
 print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</th>\n</tr>"
 print completedTable
-print '</table></body>'
+print '</table>'
+print '<p>'
+
+cheeses = ["cheddar", "white cheddar", "pepper jack"]
+print 'Add a sandwich!'
+print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py"> Name: <INPUT type="text" name="name">'
+print 'Cheese (up to 2):' 
+for cheese in cheeses:
+    print '<INPUT type="checkbox" name="cheese[]" value={}>'.format(cheese)
+print '</p>'
+print '</body>'
+
 
 # cpy-paste form example
 #        print ("<FORM method=\"post\" action=\"/cgi-bin/jPurchased.py\">{}<INPUT type=\"hidden\" name=\"line\" value=\"{}\">"
