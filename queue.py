@@ -76,6 +76,19 @@ def columnCheckTable(name, options, cols=2):
         elif i != len(options):
             print '     <br>'
     print '     </td></tr></table>'
+    
+
+def columnRadioTable(name, option, cols=2)
+    i = 0
+    print '   <table>\n    <tr><td>'
+    for option in options:
+        print '   <INPUT type="radio" name="{}" value="{}"> {} '.format(name, option, option)
+        i += 1
+        if i % ((len(options)+cols -1)/cols) == 0:
+            print '     </td><td>'
+        elif i != len(options):
+            print '     <br>'
+    print '     </td></tr></table>'
 
 #file = open("JacobList.txt", "r")
 
