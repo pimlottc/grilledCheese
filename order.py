@@ -28,10 +28,10 @@ sanatizer = re.compile('[^a-zA-Z0-9_ ,\\|]')
 
 
 fs = cgi.FieldStorage()
-name = fs["name"].value
-bread = fs["bread"].value
-cheese = fs.getList("cheese")
-toppings = fs.getList("toppings")
+name = fs['name'].value
+bread = fs['bread'].value
+cheese = fs.getList('cheese')
+toppings = fs.getList('toppings')
 
 print name
 print bread
