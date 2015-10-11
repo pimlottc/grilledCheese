@@ -33,11 +33,20 @@ bread = fs['bread'].value
 cheese = fs.getlist('cheese')
 toppings = fs.getlist('toppings')
 
-print name
-print bread
-print cheese
-print toppings
-print time.time()
+
+if (len(cheese) > 2 || len(cheese) < 1):
+    print '<h3>Illegal number of cheeses</h3>'
+    
+orderLine = name+'|'+bread+'|'
+
+for chee in cheese:
+    orderLine += chee
+orderLine += '|'
+for topping in toppings:
+    orderLine += topping
+orderLine += '|' + str(int(time.time()))
+
+print orderLine
 
 #file = open("JacobList.txt", "r")
 
