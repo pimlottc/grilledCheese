@@ -12,7 +12,7 @@ breads = ["Italian", "sourdough", "honey wheat", "dill rye", "light rye", "glute
 breads.sort()
 cheeses = ["pepper jack", "colby jack", "white cheddar", "swiss", "muenster", "mozzarella", "smoked provolone", "asiago"]
 cheeses.sort()
-toppings = ["avocado", "dill pickles", "creamy horseradish", "yellow mustard", "mayo", "horseradish mustard", "bell peppers", "sunflower seeds", "tomatoes", "ham", "bologna", "chicken", "roast beef", "turkey"]
+toppings = ["apple", "asian pear", "blueberries", "grapes", "raisins", "avocado", "bell pepper", "dill pickles", "green beans", "potato", "tomato", "sunflower seeds", "cashews", "peanuts", "pecans", "slivered almonds", "smoked turkey breast", "chicken breast", "black forest ham", "balogna", "salami", "roast beef", "hard boiled eggs", "goldfish crackers", "wheat thins", "sun chips (french onion)", "sun chips (harvest cheddar)", "soy sauce", "worcestershire sauce", "dijon mustard", "maple syrup", "yellow mustard", "mayonnaise", "horseradish mustard", "creamy horseradish", "polish mustard" ]; ["avocado", "dill pickles", "creamy horseradish", "yellow mustard", "mayo", "horseradish mustard", "bell peppers", "sunflower seeds", "tomatoes", "ham", "bologna", "chicken", "roast beef", "turkey"]
 toppings.sort()
 
 names = ["Pia", "Hazel", "Genevieve", "Annabella", "Chris", "Mike", "Jenny", "John", "Marie", "Lynn", "Jacob", "Vickie", "Jason", "Amber", "Han", "Corrie", "Brad"]
