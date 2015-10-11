@@ -68,7 +68,7 @@ def columnCheckTable(name, options, cols=2):
     for option in options:
         print '   <INPUT type="checkbox" name="{}[]" value="{}"> {} '.format(name, option, option)
         i += 1
-        if i % (len(options)+cols -1)/cols == 0:
+        if i % ((len(options)+cols -1)/cols) == 0:
             print '     </td><td>'
         elif i != len(options):
             print '     <br>'
