@@ -7,6 +7,12 @@ cgitb.enable()
 
 nameCounts = {}
 
+
+cheeses = ["pepper jack", "colby jack", "white cheddar", "swiss", "muenster", "mozzarella", "smoked provolone", "asiago"]
+cheeses.sort()
+toppings = ["avocado", "dill pickles", "creamy horseradish", "yellow mustard", "mayo", "horseradish mustard", "bell peppers", "sunflower seeds", "tomatos", "ham", "bologna", "chicken", "roast beef", "turkey"]
+toppings.sort()
+
 def makeTableLines(dataList):
     output = ''
     for line in dataList:
@@ -60,7 +66,7 @@ def twoColumnCheckTable(name, options):
     for option in options:
         print '   <INPUT type="checkbox" name="{}[]" value="{}"> {} '.format(name, option, option)
         i += 1
-        if i == len(options)/2:
+        if i == (len(options)+1)/2:
             print '     </td><td>'
         elif i != len(options):
             print '     <br>'
@@ -80,13 +86,15 @@ print "<tr>\n <th>Name</th>\n <th>Bread</th>\n <th>Cheese</th>\n <th>Toppings</t
 print completedTable
 print '</table>'
 
-cheeses = ["cheddar", "white cheddar", "pepper jack", "candy", "juice"]
 print '<h3>Request a sandwich!</h3>'
 print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py">'
 print '<table>\n <tr>\n  <th>Name</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppings</th>\n </tr>'
 print ' <tr>\n  <td>\n   <input type="text" name="name">\n  </td>'
 print '  <td>'
 twoColumnCheckTable("cheese", cheeses)
+print '  </td>'
+print '  <td>'
+twoColumnCheckTable("toppings", toppings)
 print '  </td>'
 print '</body>'
 
