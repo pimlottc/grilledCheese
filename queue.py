@@ -76,7 +76,7 @@ print 'Add a sandwich!'
 print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py"> Name: <INPUT type="text" name="name">'
 print 'Cheese (up to 2):' 
 for cheese in cheeses:
-    print '<INPUT type="checkbox" name="cheese[]" value={}>'.format(cheese)
+    print '<INPUT type="checkbox" name="cheese[]" value="{}"> {}<br>'.format(cheese, cheese)
 print '</p>'
 print '</body>'
 
