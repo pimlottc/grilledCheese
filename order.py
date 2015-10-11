@@ -33,6 +33,7 @@ bread = fs['bread'].value
 cheese = fs.getlist('cheese')
 toppings = fs.getlist('toppings')
 
+queue = open('E:\\WebData\\queue.txt', "a")
 
 if (len(cheese) > 2 or len(cheese) < 1):
     print '<h3>Illegal number of cheeses</h3>'
@@ -50,7 +51,8 @@ for topping in toppings:
 orderLine = orderLine[:-1]
 orderLine += '|' + str(int(time.time()))
 
-print orderLine
+queue.write(orderLine)
+queue.close()
 
 #file = open("JacobList.txt", "r")
 
