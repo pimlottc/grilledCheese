@@ -78,11 +78,16 @@ print '<table>\n <tr>\n  <th>Name</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppi
 print ' <tr>\n  <td>\n   <input type="text" name="name">\n  </td>'
 print '  <td>'
 i = 0
+print '   <table>\n    <tr><td>'
 for cheese in cheeses:
     print '   <INPUT type="checkbox" name="cheese[]" value="{}"> {} '.format(cheese, cheese)
     i += 1
-    if i % 2 == 0:
-        print '    <br>'
+    if i == len(cheeses):
+        print ''
+    elif i == len(cheeses)/2:
+        print '     </td><td>'
+    else:
+        print '     <br>'
 
 print '</p>'
 print '</body>'
