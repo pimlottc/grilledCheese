@@ -78,7 +78,7 @@ def columnCheckTable(name, options, cols=2):
     print '     </td></tr></table>'
     
 
-def columnRadioTable(name, option, cols=2)
+def columnRadioTable(name, option, cols=2):
     i = 0
     print '   <table>\n    <tr><td>'
     for option in options:
