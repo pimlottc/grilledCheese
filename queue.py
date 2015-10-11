@@ -71,12 +71,19 @@ print completedTable
 print '</table>'
 print '<p>'
 
-cheeses = ["cheddar", "white cheddar", "pepper jack"]
-print 'Add a sandwich!'
-print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py"> Name: <INPUT type="text" name="name">'
-print 'Cheese (up to 2):' 
+cheeses = ["cheddar", "white cheddar", "pepper jack", "candy"]
+print '<h3>Request a sandwich!</h3>'
+print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py">'
+print '<table>\n <tr>\n  <th>Name</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppings</th>\n </tr>'
+print ' <tr>\n  <td>\n   <input type="text" name="name">\n  </td>'
+print '  <td>'
+i = 0
 for cheese in cheeses:
-    print '<INPUT type="checkbox" name="cheese[]" value="{}"> {}<br>'.format(cheese, cheese)
+    print '   <INPUT type="checkbox" name="cheese[]" value="{}"> {} '.format(cheese, cheese)
+    i += 1
+    if i % 2 == 0:
+        print '    <br>'
+
 print '</p>'
 print '</body>'
 
