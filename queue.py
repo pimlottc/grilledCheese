@@ -93,13 +93,14 @@ print '<FORM method="post" action="/cgi-bin/grilledCheese/order.py">'
 print '<table>\n <tr>\n  <th>Name</th>\n  <th>Bread</th>\n  <th>Cheese (up to 2)</th>\n  <th>Toppings</th>\n </tr>'
 print ' <tr>\n  <td>\n   <input type="text" name="name">\n  </td>'
 print '  <td>'
-columnCheckTable("cheese", cheeses)
-print '  </td>'
-print '  <td>'
 columnCheckTable("bread", breads)
 print '  </td>'
 print '  <td>'
-columnCheckTable("toppings", toppings)
+columnCheckTable("cheese", cheeses)
+print '  </td>'
+print '  <td>'
+columnCheckTable("toppings", toppings, 3)
+print '   Custom: <input type="text" name=toppings[]>'
 print '  </td>'
 print '</body>'
 
